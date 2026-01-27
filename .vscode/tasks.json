@@ -1,0 +1,162 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    // ==========================
+    // CURRENT FILE — APPLE CLANG
+    // ==========================
+    {
+      "label": "Apple Clang++ (current file)",
+      "type": "shell",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-std=c++20",
+        "-Wall",
+        "-Wextra",
+        "-fcolor-diagnostics",
+        "-fansi-escape-codes",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "Apple Clang++ C++20"
+    },
+
+    // ==========================
+    // CURRENT FILE — HOMEBREW CLANG
+    // ==========================
+    {
+      "label": "Homebrew Clang++ (current file)",
+      "type": "shell",
+      "command": "/usr/local/opt/llvm/bin/clang++",
+      "args": [
+        "-std=c++20",
+        "-Wall",
+        "-Wextra",
+        "-fcolor-diagnostics",
+        "-fansi-escape-codes",
+        "-g",
+        "-isysroot",
+        "${env:SDKROOT}",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "Homebrew Clang++ C++20"
+    },
+
+    // ==========================
+    // CURRENT FILE — G++-15
+    // ==========================
+    {
+      "label": "G++-15 (current file)",
+      "type": "shell",
+      "command": "/usr/local/bin/g++-15",
+      "args": [
+        "-std=c++20",
+        "-Wall",
+        "-Wextra",
+        "-fdiagnostics-color=always",
+        "-g",
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${fileDirname}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "Homebrew G++-15 C++20"
+    },
+
+    // ==========================
+    // FULL PROJECT — APPLE CLANG
+    // ==========================
+    {
+      "label": "Apple Clang++ (all files)",
+      "type": "shell",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-std=c++20",
+        "-Wall",
+        "-Wextra",
+        "-fcolor-diagnostics",
+        "-fansi-escape-codes",
+        "-g",
+        "${workspaceFolder}/*.cpp",
+        "-o",
+        "${workspaceFolder}/program"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "Apple Clang++ C++20 full project"
+    },
+
+    // ==========================
+    // FULL PROJECT — HOMEBREW CLANG
+    // ==========================
+    {
+      "label": "Homebrew Clang++ (all files)",
+      "type": "shell",
+      "command": "/usr/local/opt/llvm/bin/clang++",
+      "args": [
+        "-std=c++20",
+        "-Wall",
+        "-Wextra",
+        "-fcolor-diagnostics",
+        "-fansi-escape-codes",
+        "-g",
+        "-isysroot",
+        "${env:SDKROOT}",
+        "${workspaceFolder}/*.cpp",
+        "-o",
+        "${workspaceFolder}/program"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "Homebrew Clang++ C++20 full project"
+    },
+
+    // ==========================
+    // FULL PROJECT — G++-15
+    // ==========================
+    {
+      "label": "G++-15 (all files)",
+      "type": "shell",
+      "command": "/usr/local/bin/g++-15",
+      "args": [
+        "-std=c++20",
+        "-Wall",
+        "-Wextra",
+        "-fdiagnostics-color=always",
+        "-g",
+        "${workspaceFolder}/*.cpp",
+        "-o",
+        "${workspaceFolder}/program"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"],
+      "group": "build",
+      "detail": "Homebrew G++-15 C++20 full project"
+    }
+  ]
+}
