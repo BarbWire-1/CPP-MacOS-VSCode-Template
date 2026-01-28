@@ -1,2 +1,5 @@
 #vscode
 .history
+
+#internals
+*.txt
