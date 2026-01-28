@@ -1,10 +1,12 @@
-# macOS Notes for C++ Course (VS Code & zsh)
+# CPP-MacOS-VSCode-Template
 
-I created this setup to follow the C++ course referenced here:
-[freeCodeCamp C++ Programming Course](https://www.youtube.com/watch?v=8jLOx1hD3_o)
+A macOS-specific C++ setup for VS Code, including zsh tips, SDKROOT handling, and build tasks for the [freeCodeCamp C++ Programming Course](https://www.youtube.com/watch?v=8jLOx1hD3_o).
 
-On **macOS**, there are a few differences compared to Windows/PowerShell in the shell commands and the build process.
-So after installing all the compilerRelated stuff via hombrew:
+Struggled with the setup for days? Been there, done that — here’s the result, which hopefully helps you get past this first obstacle.
+
+> ⚠️ This template is intentionally macOS-specific. Windows users should follow the original freeCodeCamp setup.
+
+On **macOS**, there are a few differences compared to Windows/PowerShell in the shell commands and the build process. After installing all the compiler-related tools via Homebrew:
 
 ---
 
