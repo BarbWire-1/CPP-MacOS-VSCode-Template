@@ -1,9 +1,0 @@
----
-triple:          'x86_64-apple-darwin'
-binary-path:     '/Users/barbara/CPP_freeCodeCamp/program'
-relocations:
-  - { offset: 0x36DD, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x18394, symBinAddr: 0x100002000, symSize: 0x0 }
-  - { offset: 0x37F6, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_main.cpp, symObjAddr: 0xA8, symBinAddr: 0x100000813, symSize: 0xB }
-  - { offset: 0x380D, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x72, symBinAddr: 0x1000007DD, symSize: 0x36 }
-  - { offset: 0x382B, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100000778, symSize: 0x65 }
-...
