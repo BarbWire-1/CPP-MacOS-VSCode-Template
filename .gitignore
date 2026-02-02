@@ -3,3 +3,10 @@
 
 #internals
 *.txt
+
+#build
+*.dSYM
+*.yml
+*.plist
+
+rooster
