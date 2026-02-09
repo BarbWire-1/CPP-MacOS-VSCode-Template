@@ -1,13 +1,68 @@
 {
   "version": "0.2.0",
   "configurations": [
-{
-  "name": "Debug Snippet",
-  "type": "lldb",
-  "request": "launch",
-  "program": "${workspaceFolder}/./snippets/snippet_debug/snippet",
-  "cwd": "${workspaceFolder}",
-  "initCommands": ["breakpoint set --name main"]
-}
+		{
+			"name": "Rooster Binary",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${workspaceFolder}/rooster",
+			"cwd": "${workspaceFolder}",
+			"initCommands": ["breakpoint set --name main"]
+		},
+    // The following debug commands compile and then debug
+		{
+			"name": "Apple Clang++ (current file)",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${fileDirname}/rooster",
+			"cwd": "${fileDirname}",
+			"preLaunchTask": "Apple Clang++ (current file)",
+			"initCommands": ["breakpoint set --name main"]
+		},
+		{
+			"name": "Homebrew Clang++ (current file)",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${fileDirname}/rooster",
+			"cwd": "${fileDirname}",
+			"preLaunchTask": "Homebrew Clang++ (current file)",
+			"initCommands": ["breakpoint set --name main"]
+		},
+		{
+			"name": "G++-15 (current file)",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${fileDirname}/rooster",
+			"cwd": "${fileDirname}",
+			"preLaunchTask": "G++-15 (current file)",
+			"initCommands": ["breakpoint set --name main"]
+		},
+		{
+			"name": "Clang++ (full project)",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${workspaceFolder}/rooster",
+			"cwd": "${workspaceFolder}",
+			"preLaunchTask": "Apple Clang++ (all files)",
+			"initCommands": ["breakpoint set --name main"]
+		},
+		{
+			"name": "Homebrew Clang++ (full project)",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${workspaceFolder}/rooster",
+			"cwd": "${workspaceFolder}",
+			"preLaunchTask": "Homebrew Clang++ (all files)",
+			"initCommands": ["breakpoint set --name main"]
+		},
+		{
+			"name": "G++-15 (full project)",
+			"type": "lldb",
+			"request": "launch",
+			"program": "${workspaceFolder}/rooster",
+			"cwd": "${workspaceFolder}",
+			"preLaunchTask": "G++-15 (all files)",
+			"initCommands": ["breakpoint set --name main"]
+		}
   ]
 }
